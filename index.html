@@ -269,21 +269,14 @@
             transform: perspective(1000px) rotateY(0deg);
         }
 
-        /* новые классы для адаптивного плеера kinescope */
-        .kinescope-wrapper {
-            position: relative;
-            padding-top: 177.78%; /* пропорция 9:16 */
+        /* стили для нативного видео */
+        .hero__video-native {
             width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            aspect-ratio: 9 / 16;
             background-color: #000;
-        }
-
-        .kinescope-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
         }
 
         /* --- РАЗДЕЛ 3: ЛОКАЦИИ --- */
@@ -681,9 +674,9 @@
                     </div>
                 </div>
                 <div class="hero__media">
-                    <div class="kinescope-wrapper">
-                        <iframe src="https://kinescope.io/embed/8ZpCfVe1yr9AykP7Hf83g8?autoplay=1&muted=1&loop=1" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" allowfullscreen></iframe>
-                    </div>
+                    <video autoplay muted loop playsinline class="hero__video-native">
+                        <source src="hero-video.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
@@ -730,7 +723,7 @@
                     </div>
                     <div class="location-card__overlay">
                         <h3 class="location-card__title">Икеле Микеле</h3>
-                        <p class="location-card__subtitle">уникальный сувенир с твоим днк.</p>
+                        <p class="location-card__subtitle">уникальный магазин, где реальность пересекается с фантазией</p>
                         <button class="location-card__btn">подробнее</button>
                     </div>
                 </article>
